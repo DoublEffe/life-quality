@@ -1,8 +1,7 @@
 import { formDiv } from "./form.js"
 
 
-const infoBox = (info) => {
-  console.log(info)
+const infoBox = (info,summary, city_score) => {
   let infoDiv = document.createElement('div')
   infoDiv.setAttribute('id', 'info')
   formDiv.appendChild(infoDiv)
@@ -66,14 +65,9 @@ const infoBox = (info) => {
       }
     });
   infoDiv.appendChild(canvas)
-  /*
-  let hide = document.createElement('button')
-  hide.textContent = 'try naother city'
-  infoDiv.appendChild(hide)
-  hide.onclick = () => {
-    hide.style.display = 'none'
-    canvas.style.display = 'none'
-  }*/
+  let p = document.createElement('p')
+  p.innerHTML = summary + '<b> Teleport city score: </b>'+ city_score
+  infoDiv.appendChild(p)
 }
 
 export {infoBox}

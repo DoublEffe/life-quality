@@ -1,0 +1,26 @@
+{
+  "name": "life-quality-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoublEffe/life-quality.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoublEffe/life-quality/issues"
+  },
+  "homepage": "https://github.com/DoublEffe/life-quality#readme",
+  "devDependencies": {
+    "firebase": "^9.23.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,10 +1,27 @@
 
 import {regioni, keys} from './data.js'
-import { tax_accup, housing_cost, reddito_medio, life_expect, omicidi_volontari } from './prova.js'
+import { unemp_perc, reddito_medio, life_expect, omicidi_volontari } from './network.js'
 
 
-async function istat(){
-  await tax_accup()
+
+
+
+
+
+async function istat(name){
+  let arr = []
+  try{
+    let unemp = await unemp_perc(name)
+    let redd = await reddito_medio(name)
+    let life = await life_expect(name)
+    let omici = await omicidi_volontari(name)
+    
+    arr.push(unemp, redd, life, omici)
+    arr = arr.map(x => !x ? 'N.D.' : x)
+    return arr
+  }catch (e){
+    alert('Error', e)
+  }
 }
 
 let svg = document.createElementNS('http://www.w3.org/2000/svg','svg')
@@ -32,46 +49,30 @@ for (let i=0; i < 20;i++){
   path.setAttribute('stroke-miterlimit','10')
   path.setAttribute('d',regioni[keys[i]].path)
   path.style.transition = 'all 200ms ease-in-out'
+  path.style.position = 'relative'
+
   g.appendChild(path)
   
-  path.onclick = () => {
+  path.onclick = async () => {
     let paths = document.querySelectorAll('path')
     paths.forEach((path) => {
       path.classList.remove('selected')
       path.style.fill = '#3E5C73'
     })
+    path.setAttribute('id', 'tooltip')
     path.setAttribute('class', 'selected')
     path.style.fill = 'white'
-    console.log(path.dataset.nomeRegione)
-    
   }
-
-  tippy(path,{
-    onShow(){
-      content: path.dataset.nomeRegione,
-      istat()
+  
+  let tooltip = tippy(path)
+  tooltip.setProps({
+    allowHTML: true,
+    async onTrigger(){
+      let arr = await istat(path.dataset.nomeRegione)
+      tooltip.setContent(`<p><bold>${path.dataset.nomeRegione}</bold></p><p>unemployment rate: ${arr[0]}</p><p>mean wage: ${arr[1]}</p><p>life expectation: ${arr[2]}</p><p>homicide: ${arr[3]}</p>`)
     }
   })
-  
 }
 
-
-
-/*
-document.addEventListener('DOMContentLoaded', () => {
-  tippy(path,{
-    content: path.dataset.nomeRegione,
-    onCreate(){
-      istat()
-    }
-  })
-})
-
-/*
-let paths = document.querySelectorAll('path')
-let instance = tippy(paths)
-instance.onCreate = () => {
-  istat()
-}*/
 
 export {svg}

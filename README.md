@@ -38,8 +38,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <a href="#map">Map</a>
-        <a href="#Search Bar">Search Bar</a>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#Search Bar">Search Bar</a></li>
       </ul>
     </li> 
     <li><a href="#license">License</a></li>

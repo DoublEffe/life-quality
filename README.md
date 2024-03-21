@@ -96,7 +96,9 @@ If you are seeing n.d this means that data are unavailable.
 
 ![Search Bar Screen Shot](https://github.com/DoublEffe/life-quality/blob/main/ScreenshotSearch.png)
 
-In this serach bar you can search a city and see in a chart some info about the city like:
+In this serach bar you can search a city and see in a chart some info about the pollution of the serched city like:
+-  
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

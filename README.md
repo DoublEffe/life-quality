@@ -97,6 +97,13 @@ If you are seeing n.d this means that data are unavailable.
 ![Search Bar Screen Shot](https://github.com/DoublEffe/life-quality/blob/main/ScreenshotSearch.png)
 
 In this serach bar you can search a city and see in a chart some info about the pollution of the serched city like:
+  - Carbon Monoxide;
+  - Condensation Droplets;
+  - Hydocarbons;
+  - Nitrogen Dioxide;
+  - Particles;
+  - Particles less than 10 micometers;
+  - Particles less than 2.5 micometers;
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

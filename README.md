@@ -38,8 +38,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <a href="#map">Map</a>
-        <a href="#Search Bar">Search Bar</a>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#Search Bar">Search Bar</a></li>
       </ul>
     </li> 
     <li><a href="#license">License</a></li>
@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![LifeIndex Screen Shot]()
+![LifeIndex Screen Shot](https://github.com/DoublEffe/life-quality/blob/main/Screenshot.png)
 
 
 
@@ -82,7 +82,7 @@ A you can se the page is divided in two section the map and the search bar.
 
 ### Map
 
-![Map Screen Shot]()
+![Map Screen Shot](https://github.com/DoublEffe/life-quality/blob/main/ScreenshotMap.png)
 
 In this map you can just hoover on a region to se some data about the BLI: 
   - Percentage of unemployed people above 15 years old;
@@ -94,9 +94,17 @@ If you are seeing n.d this means that data are unavailable.
 
 ### Search Bar
 
-![Search Bar Screen Shot]()
+![Search Bar Screen Shot](https://github.com/DoublEffe/life-quality/blob/main/ScreenshotSearch.png)
 
-In this serach bar you can search a city and see in a chart some info about the city like:
+In this serach bar you can search a city and see in a chart some info about the pollution of the serched city like:
+  - Carbon Monoxide;
+  - Condensation Droplets;
+  - Hydocarbons;
+  - Nitrogen Dioxide;
+  - Particles;
+  - Particles less than 10 micometers;
+  - Particles less than 2.5 micometers;
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

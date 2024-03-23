@@ -31,8 +31,8 @@ form.onsubmit = async (e) => {
   let formData = new FormData(form)
   let cityName = formData.get('search-bar')
   try{
-    let {categories, summary, city_score} = await city_info(cityName)
-    infoBox(categories, summary, city_score)
+    let {names, values} = await city_info(cityName)
+    infoBox(names, values)
   } catch(e){
     alert('Error',e)
   }

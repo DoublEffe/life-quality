@@ -67,6 +67,7 @@ for (let i=0; i < 20;i++){
   let tooltip = tippy(path)
   tooltip.setProps({
     allowHTML: true,
+    trigger: 'click',
     async onTrigger(){
       let arr = await istat(path.dataset.nomeRegione)
       tooltip.setContent(`<p><bold>${path.dataset.nomeRegione}</bold></p><p>unemployment rate: ${arr[0]}</p><p>mean wage: ${arr[1]}</p><p>life expectation: ${arr[2]}</p><p>homicide: ${arr[3]}</p>`)

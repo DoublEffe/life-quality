@@ -33,13 +33,13 @@ function omicidi_volontari(name){
 
 
 async function city_info(name){
-    let res = await fetch(`https://api.teleport.org/api/urban_areas/slug:${name}/scores/`)
+    let res = await fetch(`https://api.waqi.info/feed/${name}/?token=94aa37b4e89aade7fa4d52b7b86de7901b04964b`)
     let json = await res.json()
-    let categories = json.categories
-    let summary = json.summary
-    let city_score = json.teleport_city_score
-    return {categories,summary, city_score}
-}
+    let names = Object.keys(json.data.iaqi)
+    let values = Object.values(json.data.iaqi)
+    return {names, values}
+  }
+
 
 
 export {city_info, unemp_perc, reddito_medio, life_expect, omicidi_volontari}
